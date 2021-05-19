@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+    <h1>Registrar Producto</h1>
+</div>
+
+<div style="margin-top: 10ex">
+    <form class="row g-4 needs-validation d-flex flex-row justify-content-center align-items-center">
+      <div class="col-md-3" style="max-width: 50ex; min-width: 50ex">
+        <label class="form-label">Nombre</label>
+        <div>
+          <input type="text" class="form-control" placeholder="Escribe el nombre de tu producto" minlength="3" name="descripcion" [(ngModel)]="prod.nombre">          
+        </div>
+      </div>
+      <div class="col-md-3" style="max-width: 50ex; min-width: 50ex">
+        <label class="form-label">Precio (S/.)</label>
+        <div>
+          <input type="number" min="0.01" max="100000.00" step=".01" class="form-control" placeholder="Coloca el precio del producto" name="precio" [(ngModel)]="prod.precio">        
+        </div>
+      </div>
+      <div class="col-12" style="text-align: center; margin-top: 10ex;">
+        <button class="btn btn-primary button" type="button" id="button_anim" (click)="nuevo()">
+          Registrar
+        </button>
+      </div>
+    </form>
+</div>
+

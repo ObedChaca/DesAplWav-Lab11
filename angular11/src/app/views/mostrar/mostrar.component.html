@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="container" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+    <h1>Información del Producto</h1>
+</div>
+
+<div class="m-0 row justify-content-center" style="text-align: center;" *ngFor="let producto of productos">
+    <form [formGroup]="editarForm" (ngSubmit)="actualizar(editarForm.value)" class="m-0 row needs-validation justify-content-center container ">
+        <div class="container col-auto m-0 row justify-content-center for" style="margin-top: 50px; width: 900px; padding-left: 30px; padding-right: 30px;">
+            <div class="row"  style="max-width: 500px;">
+                <div class="">
+                    <div class="col-md-12 headers">
+                        ID
+                    </div>
+                    <div class="col-md-12 contents">
+                        {{producto.codigo}}
+                    </div>    
+                </div>
+
+                <div class="">
+                    <div class="col-md-12 headers">
+                        Nombre
+                    </div>
+                    <div class="col-md-12 contents">
+                        <input type="text" formControlName="nombre" class="form-control" name="codigo"  style="text-align: center;" >
+                    </div>
+                </div>
+                
+                <div class="">
+                    <div class="col-md-12 headers">
+                        Precio (S/.)
+                    </div>
+                    <div class="col-md-12 contents">
+                        <input type="text" formControlName="precio" class="form-control" name="codigo" style="text-align: center;">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-12" style="margin-bottom: 30px; margin-top: 20px;">
+                        <button class="btn btn-primary" (click)="actualizar()">Actualizar</button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-12">
+                        <button (click)="eliminar(producto.codigo)" class="btn btn-primary" style="background-color: brown; border-color: brown;">Eliminar</button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>        
+    </form>
+        
+</div>

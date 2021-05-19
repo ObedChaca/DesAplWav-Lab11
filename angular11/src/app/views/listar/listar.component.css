@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+th {
+    color: rgb(16, 16, 148);
+}
+td {
+    max-width: 60px;
+    word-wrap: break-word;
+}
+div {
+    word-wrap: break-word;
+}

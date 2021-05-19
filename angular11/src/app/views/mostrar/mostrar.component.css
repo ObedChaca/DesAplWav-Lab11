@@ -1,0 +1,12 @@
+.headers {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(16, 16, 148);
+}
+
+.contents {
+    margin-bottom: 30px;
+    font-size: medium;
+}
